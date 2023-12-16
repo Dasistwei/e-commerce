@@ -1,4 +1,4 @@
-import SignIn from "./routes/sign-in/sign-in.component"
+import SignIn from "./components/sign-in"
 
 function App() {
   return (

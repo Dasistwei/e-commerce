@@ -28,6 +28,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
+//auth signin with google account
 const provider = new GoogleAuthProvider()
 const githubProvider= new GithubAuthProvider()
 
@@ -40,7 +41,9 @@ githubProvider.setCustomParameters({
 
 export const auth= getAuth()
 // console.log(auth)
-export const signInWithGooglePopup=()=>signInWithPopup(auth, provider)
+export const signInWithGooglePopup =()=>signInWithPopup(auth, provider)
+export const signInWithGoogleRedirect = () => signInWithRedirect(auth, provider)
+
 export const signInWithGithubPopup=()=>signInWithPopup(auth, githubProvider)
 
 export const db = getFirestore()
